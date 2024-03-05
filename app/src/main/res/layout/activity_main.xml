@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Judul Aplikasi -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APLIKASI KASIR"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Konten Aplikasi -->
+    <TextView
+        android:id="@+id/textViewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewTitle" />
+
+    <!-- Radio Button untuk Pilihan Barang -->
+    <RadioGroup
+        android:id="@+id/radioGroupItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewItem"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButtonSamsung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Samsung" />
+
+        <RadioButton
+            android:id="@+id/radioButtoniPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="iPhone" />
+
+        <RadioButton
+            android:id="@+id/radioButtonXiaomi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xiaomi" />
+    </RadioGroup>
+
+    <!-- EditText untuk Jumlah Barang -->
+    <TextView
+        android:id="@+id/textViewQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupItem"
+        android:layout_marginTop="16dp"
+        android:text="Quantity:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewQuantity"
+        android:hint="@string/app_name"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <!-- CheckBox untuk Member -->
+    <CheckBox
+        android:id="@+id/checkBoxMembership"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextQuantity"
+        android:layout_marginTop="16dp"
+        android:text="Membership" />
+
+    <!-- Tombol untuk Menambahkan Barang -->
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxMembership"
+        android:layout_marginTop="16dp"
+        android:text="Add" />
+
+    <!-- Tombol untuk Proses Transaksi -->
+    <Button
+        android:id="@+id/buttonProcess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAdd"
+        android:layout_marginTop="16dp"
+        android:text="Process" />
+
+    <!-- Tombol untuk Menghapus Isi -->
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonProcess"
+        android:layout_marginTop="16dp"
+        android:text="Clear" />
+
+    <!-- TextView untuk Bon Transaksi -->
+    <TextView
+        android:id="@+id/textViewReceipt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonClear"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp" />
+
+    <!-- TextView untuk Total Transaksi -->
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewReceipt"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
